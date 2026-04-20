@@ -1,0 +1,61 @@
+# Thrustra Growth Agency
+
+> Thrustra is a boutique digital growth agency that builds custom websites, branded CRMs with admin logins, realtime dashboards, and workflow automation systems. Clients own every credential, source file, and infrastructure account. Operating across Danville VA, New York City, and Atlanta.
+
+## Core Positioning
+
+Most agencies ship websites. Thrustra ships the whole stack — website plus CRM, admin panel, realtime database, and workflow automation — on production-grade infrastructure. Every client owns their Firebase project, Stripe account, Twilio number, and n8n workflows. The agency can be terminated without anything breaking.
+
+## Services
+
+- **Growth Engine Website** — Complete launch-ready custom website. Strategy, copy direction, design, development, SEO setup, and launch. Delivered in 10–14 days. Starting at $800 setup plus $150/month retainer. Full file handoff at launch.
+- **CRM & Admin Dashboards** — Custom-built CRMs with full CRUD operations, kanban deal pipelines, admin authentication, and real-time Firestore sync. Replaces HubSpot-style SaaS subscriptions with owned infrastructure.
+- **Realtime Web Applications** — Firebase-backed live class schedules, booking engines, photo galleries, availability calendars, and inventory systems with Stripe payment integration and mobile admin panels.
+- **Automation & Workflow Systems** — n8n pipelines connecting CRM, inbox, SMS, and APIs. Lead alerts, Twilio SMS reminders, SAM.gov federal contract intelligence, compliance report generators, and daily job briefs.
+- **Brand Identity System** — Complete brand identity including logo design, color palette, typography, and brand language for premium market positioning.
+
+## The Stack
+
+- **Data:** Firebase + Firestore (real-time database, authentication, hosting)
+- **Payments:** Stripe (payment links, subscriptions, custom checkout)
+- **Communications:** Twilio (dedicated SMS lines, automated reminders, lead alerts)
+- **Automation:** n8n (workflow orchestration, API pipelines, scheduled jobs)
+
+## Delivery Timeline
+
+- Day 1 — Discovery call, business strategy session (free)
+- Days 2–3 — Strategy, wireframe, proposal with design direction and full scope
+- Days 4–10 — Design and development with live preview and in-scope revisions
+- Day 14 — Launch and full file handoff (all assets production-ready, no platform lock-in)
+
+## Markets Served
+
+- Danville, Virginia (founder base)
+- New York City, New York (NYC Director Martin)
+- Atlanta, Georgia (ATL Partner Trey)
+- National and international (delivered work in Switzerland, Senegal, and across the US)
+
+## Team
+
+- **Karim** — Founder, strategy and creative direction. Aeronautics degree, first-generation college graduate.
+- **Anthony** — Head of Development and Infrastructure. Certified network and security professional responsible for architecture, performance, and production layer.
+- **Martin** — NYC Market Director and Growth Strategist. Embedded in New York's competitive service economy.
+- **Trey** — Atlanta Partner and Brand Connector. Deep roots in ATL's creative economy for high-trust brand referrals.
+
+## Representative Clients
+
+- Vendetta Mobile Detailing (Raleigh, NC) — Luxury brand identity and site for mobile detail service
+- Blue Eclipse Pool & Spa (NC Triad) — Local service site with lead capture
+- Alvarado's Property Maintenance (Northern VA) — Full operating system: Firebase-backed photo gallery, job calendar, n8n automation suite, Twilio SMS line
+- Cleared to Clean LLC (Northern VA / FL) — Security-cleared janitorial brand with SAM.gov federal contract intelligence pipeline and automated compliance reporting
+- Elite Fit Matwyn (Zürich, Switzerland) — Brand identity for Venum-sponsored professional boxer
+- Fleur Fruitée (Dakar, Sénégal) — French-language e-commerce brand with Orange Money and Wave payment integrations, WhatsApp fulfillment
+
+## Contact
+
+- Website: https://thrustra.com
+- Book a free strategy call: https://calendly.com/thrustragrowthagency
+
+## Ownership Philosophy
+
+Every Thrustra client receives full ownership at launch: source files, Firebase project credentials, Stripe account, Twilio phone number, domain, and n8n workflow exports. There is no platform lock-in, no proprietary builder, and no recurring license fee beyond the optional monthly retainer. A client can fire Thrustra tomorrow and continue operating every system without disruption.
