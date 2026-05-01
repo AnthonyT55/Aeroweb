@@ -1,1 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pilot · The Drop — Thrustra · Two on-ramps. Yours forever.</title>
+<meta name="description" content="The Pilot ($1,500, 7 days): a single owned landing page. The Drop ($3,500 + $1,500/mo): page, ad creative, and managed Meta/TikTok ads built for clothing brands. Both yours at handoff.">
+<meta name="author" content="Thrustra">
+<link rel="canonical" href="https://thrustra.com/pilot/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thrustra.com/pilot/">
+<meta property="og:title" content="The Pilot · The Drop — Thrustra">
+<meta property="og:description" content="Two on-ramps to a Thrustra build. The Pilot — a landing page in 7 days. The Drop — page + creative + managed ads for clothing brands. Both yours at handoff.">
+<meta property="og:site_name" content="Thrustra">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Pilot · The Drop — Thrustra">
+<meta name="twitter:description" content="Two on-ramps. Same studio. Yours forever.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "The Pilot · The Drop",
+  "provider": { "@type": "Organization", "name": "Thrustra", "url": "https://thrustra.com" },
+  "description": "Two on-ramps to a Thrustra build. The Pilot ($1,500, 7-day delivery): a single owned landing page. The Drop ($3,500 + $1,500/mo, 60-day minimum on ads): page, ad creative, and managed Meta/TikTok ads scoped specifically for clothing brands and CPG drops.",
+  "areaServed": "Worldwide",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Pilot On-Ramps",
+    "itemListElement": [
+      { "@type": "Offer", "name": "The Pilot", "price": "1500", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "The Pilot — single high-conversion landing page, brand foundation, 7-day delivery. Full fee credits to The Launch on upgrade within 30 days." } },
+      { "@type": "Offer", "name": "The Drop — Build", "price": "3500", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "The Drop (build) — drop landing page plus 3–5 ad creative units for clothing brands and CPG drops. 7-day delivery. Yours at handoff." } },
+      { "@type": "Offer", "name": "The Drop — Managed Ads", "price": "1500", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1500", "priceCurrency": "USD", "unitText": "MONTH" }, "itemOffered": { "@type": "Service", "name": "The Drop (managed ads) — Meta and TikTok paid traffic management. 60-day minimum, monthly thereafter. Bundled with build saves $500 the first month." } }
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     THRUSTRA · THE PILOT — single-route conversion microsite
+     Mirrors thrustra.com v7 aesthetic. Single CTA: book intake.
+     ═══════════════════════════════════════════════════════════════ */
+
+  :root {
+    --ink:        #050505;
+    --ink-deep:   #080808;
+    --card:       #0d0d0d;
+    --card-hi:    #121212;
+    --grid:       rgba(248,246,242,0.07);
+    --grid-hi:    rgba(248,246,242,0.14);
+    --paper:      #F8F6F2;
+    --bone:       rgba(248,246,242,0.55);
+    --bone-dim:   rgba(248,246,242,0.35);
+    --accent:     #C8F04A;
+    --accent-dim: rgba(200,240,74,0.1);
+    --accent-mid: rgba(200,240,74,0.32);
+
+    --f-display:  'Bebas Neue', sans-serif;
+    --f-head:     'Syne', sans-serif;
+    --f-body:     'DM Sans', sans-serif;
+    --f-mono:     'JetBrains Mono', monospace;
+
+    --ease:       cubic-bezier(0.6, 0.01, 0.05, 1);
+    --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  img, video, svg { max-width:100%; height:auto; display:block; }
+  html { scroll-behavior:smooth; }
+
+  body {
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--f-body);
+    font-weight:300;
+    font-size:16px;
+    line-height:1.55;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  ::selection { background:var(--accent); color:var(--ink); }
+
+  /* Grain overlay — same as v7 */
+  body::after {
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    z-index:9999;
+    opacity:0.09;
+    mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' stitchTiles='stitch'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='1'/></svg>");
+  }
+
+  /* Hero ambient glow */
+  body::before {
+    content:"";
+    position:fixed;
+    top:-15vh; left:50%;
+    transform:translateX(-50%);
+    width:120vw; height:75vh;
+    background:radial-gradient(ellipse at center, rgba(200,240,74,0.06) 0%, transparent 60%);
+    pointer-events:none;
+    z-index:-1;
+  }
+
+  a { color:inherit; text-decoration:none; }
+  button { font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+
+  /* ── NAV ─────────────────────────────────────────────── */
+  nav {
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    padding:22px 36px;
+    display:flex; align-items:center; justify-content:space-between;
+    background:rgba(5,5,5,0.7);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--grid);
+  }
+  .nav-mark {
+    font-family:var(--f-display);
+    font-size:1.4rem;
+    letter-spacing:0.16em;
+    color:var(--paper);
+  }
+  .nav-mark .acc { color:var(--accent); }
+  .nav-back {
+    font-family:var(--f-mono);
+    font-size:0.7rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--bone);
+    transition:color 0.3s var(--ease);
+    display:flex; align-items:center; gap:8px;
+  }
+  .nav-back:hover { color:var(--accent); }
+  .nav-back .arr { transition:transform 0.3s var(--ease); }
+  .nav-back:hover .arr { transform:translateX(-3px); }
+
+  /* ── HERO ─────────────────────────────────────────────── */
+  .hero {
+    min-height:100vh;
+    display:flex; flex-direction:column;
+    justify-content:center;
+    padding:120px 36px 60px;
+    max-width:1280px;
+    margin:0 auto;
+    position:relative;
+  }
+
+  .hero-coords {
+    position:absolute;
+    top:90px; right:36px;
+    font-family:var(--f-mono);
+    font-size:0.62rem;
+    letter-spacing:0.22em;
+    color:var(--bone-dim);
+    text-transform:uppercase;
+    text-align:right;
+    line-height:1.7;
+  }
+  .hero-coords .acc { color:var(--accent); }
+
+  .hero-kicker {
+    font-family:var(--f-mono);
+    font-size:0.72rem;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:36px;
+    display:flex; align-items:center; gap:14px;
+  }
+  .hero-kicker::before {
+    content:"00";
+    font-family:var(--f-display);
+    font-size:1.1rem;
+    letter-spacing:0.06em;
+    color:var(--accent);
+    padding-right:14px;
+    border-right:1px solid var(--accent-mid);
+  }
+
+  .hero-title {
+    font-family:var(--f-display);
+    font-size:clamp(4.5rem, 14vw, 11rem);
+    line-height:0.86;
+    letter-spacing:0.015em;
+    margin-bottom:36px;
+    color:var(--paper);
+  }
+  .hero-title .stk {
+    text-decoration:line-through;
+    text-decoration-color:rgba(248,246,242,0.4);
+    text-decoration-thickness:2px;
+    color:var(--bone-dim);
+    margin-right:0.4em;
+  }
+  .hero-title .acc { color:var(--accent); }
+
+  .hero-row {
+    display:grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap:60px;
+    align-items:end;
+    margin-top:24px;
+  }
+  .hero-line {
+    font-family:var(--f-head);
+    font-size:clamp(1.4rem, 2.4vw, 1.95rem);
+    font-weight:600;
+    line-height:1.25;
+    color:var(--paper);
+    letter-spacing:-0.01em;
+    margin-bottom:18px;
+  }
+  .hero-line em {
+    color:var(--accent);
+    font-style:normal;
+    font-weight:700;
+  }
+  .hero-lede {
+    font-family:var(--f-body);
+    font-size:1.05rem;
+    color:var(--bone);
+    line-height:1.55;
+    max-width:34em;
+  }
+  .hero-lede strong { color:var(--paper); font-weight:500; }
+
+  .hero-cta-block {
+    display:flex; flex-direction:column;
+    gap:12px;
+    align-items:flex-start;
+  }
+  .cta-primary {
+    display:inline-flex; align-items:center; justify-content:space-between;
+    gap:18px;
+    padding:20px 28px;
+    background:var(--accent);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:0.88rem;
+    font-weight:500;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    transition:transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), background 0.4s var(--ease);
+    width:100%;
+    max-width:380px;
+  }
+  .cta-primary:hover {
+    transform:translateY(-2px);
+    background:var(--paper);
+    box-shadow:0 16px 38px -10px rgba(200,240,74,0.45);
+  }
+  .cta-primary .arr { transition:transform 0.3s var(--ease); }
+  .cta-primary:hover .arr { transform:translateX(5px); }
+
+  .hero-qual {
+    font-family:var(--f-mono);
+    font-size:0.66rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--bone);
+    line-height:1.7;
+  }
+  .hero-qual .acc { color:var(--accent); }
+
+  /* ── ECONOMICS STRIP ────────────────────────────────── */
+  .econ-section {
+    padding:80px 36px;
+    border-top:1px solid var(--grid);
+    border-bottom:1px solid var(--grid);
+    background:var(--ink-deep);
+    position:relative;
+  }
+  .econ-inner { max-width:1280px; margin:0 auto; }
+
+  .sec-num {
+    font-family:var(--f-mono);
+    font-size:0.7rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--bone-dim);
+    margin-bottom:14px;
+  }
+  .sec-title {
+    font-family:var(--f-display);
+    font-size:clamp(2.4rem, 5vw, 4rem);
+    line-height:0.95;
+    letter-spacing:0.025em;
+    color:var(--paper);
+    margin-bottom:48px;
+  }
+  .sec-title em { color:var(--accent); font-style:normal; }
+
+  .econ-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:1px;
+    background:var(--grid);
+    border:1px solid var(--grid);
+    border-left:2px solid var(--accent);
+  }
+  .econ-cell {
+    background:var(--card);
+    padding:36px 30px 32px;
+    transition:background 0.4s var(--ease);
+  }
+  .econ-cell:hover { background:var(--card-hi); }
+  .econ-label {
+    font-family:var(--f-mono);
+    font-size:0.65rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--bone-dim);
+    margin-bottom:14px;
+  }
+  .econ-num {
+    font-family:var(--f-display);
+    font-size:clamp(3rem, 6vw, 4.5rem);
+    line-height:1;
+    letter-spacing:0.025em;
+    color:var(--accent);
+    margin-bottom:14px;
+  }
+  .econ-foot {
+    font-family:var(--f-body);
+    font-size:0.86rem;
+    color:var(--bone);
+    line-height:1.55;
+  }
+
+  .credit-callout {
+    margin-top:24px;
+    padding:24px 28px;
+    background:var(--card);
+    border:1px solid var(--grid);
+    border-top:2px solid var(--accent);
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:24px;
+    align-items:center;
+  }
+  .credit-mark {
+    font-family:var(--f-display);
+    font-size:2.4rem;
+    line-height:1;
+    color:var(--accent);
+    letter-spacing:0.04em;
+    padding-right:22px;
+    border-right:1px solid var(--grid-hi);
+  }
+  .credit-text {
+    font-family:var(--f-body);
+    font-size:1rem;
+    line-height:1.55;
+    color:var(--paper);
+  }
+  .credit-text strong { color:var(--accent); font-weight:500; }
+
+  /* ── DELIVERABLES + TIMELINE ─────────────────────────── */
+  .build {
+    padding:120px 36px;
+    max-width:1280px;
+    margin:0 auto;
+    position:relative;
+  }
+
+  .build-grid {
+    display:grid;
+    grid-template-columns: 0.95fr 1.1fr;
+    gap:60px;
+    align-items:flex-start;
+  }
+
+  .deliver-list {
+    list-style:none;
+    border-top:1px solid var(--grid);
+  }
+  .deliver-list li {
+    padding:22px 0;
+    border-bottom:1px solid var(--grid);
+    display:grid;
+    grid-template-columns: 64px 1fr;
+    gap:24px;
+    align-items:baseline;
+    transition:padding-left 0.4s var(--ease-out);
+  }
+  .deliver-list li:hover { padding-left:8px; }
+  .deliver-n {
+    font-family:var(--f-mono);
+    font-size:0.7rem;
+    letter-spacing:0.16em;
+    color:var(--accent);
+  }
+  .deliver-h {
+    font-family:var(--f-head);
+    font-size:1.05rem;
+    font-weight:600;
+    color:var(--paper);
+    margin-bottom:4px;
+  }
+  .deliver-d {
+    font-family:var(--f-body);
+    font-size:0.88rem;
+    color:var(--bone);
+    line-height:1.5;
+  }
+
+  .timeline {
+    background:var(--card);
+    border:1px solid var(--grid);
+    padding:32px;
+    position:relative;
+  }
+  .timeline-label {
+    font-family:var(--f-mono);
+    font-size:0.66rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:6px;
+  }
+  .timeline-title {
+    font-family:var(--f-display);
+    font-size:2.4rem;
+    line-height:1;
+    letter-spacing:0.04em;
+    color:var(--paper);
+    margin-bottom:30px;
+  }
+  .timeline-track {
+    position:relative;
+    padding-left:24px;
+  }
+  .timeline-track::before {
+    content:"";
+    position:absolute;
+    top:8px; bottom:8px; left:5px;
+    width:1px;
+    background:linear-gradient(180deg, var(--accent) 0%, var(--accent-mid) 100%);
+  }
+  .tl-step {
+    position:relative;
+    padding-bottom:22px;
+  }
+  .tl-step:last-child { padding-bottom:0; }
+  .tl-step::before {
+    content:"";
+    position:absolute;
+    top:8px; left:-23px;
+    width:11px; height:11px;
+    background:var(--ink);
+    border:1px solid var(--accent);
+    border-radius:50%;
+    box-shadow: 0 0 0 3px var(--ink);
+  }
+  .tl-step.hot::before {
+    background:var(--accent);
+  }
+  .tl-day {
+    font-family:var(--f-mono);
+    font-size:0.66rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--bone-dim);
+    margin-bottom:5px;
+  }
+  .tl-day .acc { color:var(--accent); }
+  .tl-h {
+    font-family:var(--f-head);
+    font-size:1rem;
+    font-weight:600;
+    color:var(--paper);
+    margin-bottom:4px;
+  }
+  .tl-d {
+    font-family:var(--f-body);
+    font-size:0.85rem;
+    color:var(--bone);
+    line-height:1.5;
+  }
+
+  /* ── WHO IT'S FOR ────────────────────────────────────── */
+  .fit-section {
+    padding:120px 36px;
+    background:var(--ink-deep);
+    border-top:1px solid var(--grid);
+    border-bottom:1px solid var(--grid);
+  }
+  .fit-inner { max-width:1280px; margin:0 auto; }
+
+  .fit-grid {
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:var(--grid);
+    border:1px solid var(--grid);
+  }
+  .fit-cell {
+    background:var(--ink);
+    padding:34px 32px 32px;
+    transition:background 0.4s var(--ease);
+    position:relative;
+    overflow:hidden;
+  }
+  .fit-cell::after {
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0;
+    height:1px;
+    background:var(--accent);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 0.5s var(--ease-out);
+  }
+  .fit-cell:hover { background:var(--card-hi); }
+  .fit-cell:hover::after { transform:scaleX(1); }
+
+  .fit-num {
+    font-family:var(--f-mono);
+    font-size:0.66rem;
+    letter-spacing:0.22em;
+    color:var(--accent);
+    margin-bottom:10px;
+    text-transform:uppercase;
+  }
+  .fit-h {
+    font-family:var(--f-head);
+    font-size:1.3rem;
+    font-weight:700;
+    color:var(--paper);
+    margin-bottom:10px;
+    line-height:1.2;
+    letter-spacing:-0.01em;
+  }
+  .fit-d {
+    font-family:var(--f-body);
+    font-size:0.92rem;
+    color:var(--bone);
+    line-height:1.55;
+  }
+
+  /* ── BIG CTA BLOCK ───────────────────────────────────── */
+  .final-cta {
+    padding:140px 36px 120px;
+    max-width:1100px;
+    margin:0 auto;
+    text-align:center;
+    position:relative;
+  }
+  .final-cta::before {
+    content:"";
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    width:90%; height:380px;
+    background:radial-gradient(ellipse at center, rgba(200,240,74,0.08) 0%, transparent 60%);
+    pointer-events:none;
+    z-index:-1;
+  }
+  .final-kicker {
+    font-family:var(--f-mono);
+    font-size:0.72rem;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:24px;
+  }
+  .final-title {
+    font-family:var(--f-display);
+    font-size:clamp(3rem, 7vw, 5.5rem);
+    line-height:0.92;
+    letter-spacing:0.025em;
+    color:var(--paper);
+    margin-bottom:24px;
+  }
+  .final-title em { color:var(--accent); font-style:normal; }
+  .final-body {
+    font-family:var(--f-body);
+    font-size:1.05rem;
+    color:var(--bone);
+    line-height:1.6;
+    max-width:36em;
+    margin:0 auto 44px;
+  }
+  .final-body strong { color:var(--paper); font-weight:500; }
+
+  .final-cta-row {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+  }
+  .final-cta-button {
+    display:inline-flex; align-items:center;
+    gap:18px;
+    padding:24px 38px;
+    background:var(--accent);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:0.92rem;
+    font-weight:500;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    transition:transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), background 0.4s var(--ease);
+  }
+  .final-cta-button:hover {
+    transform:translateY(-3px);
+    background:var(--paper);
+    box-shadow:0 24px 50px -14px rgba(200,240,74,0.55);
+  }
+  .final-cta-button .arr { transition:transform 0.3s var(--ease); }
+  .final-cta-button:hover .arr { transform:translateX(6px); }
+  .final-meta {
+    font-family:var(--f-mono);
+    font-size:0.7rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--bone);
+    margin-top:14px;
+  }
+  .final-meta .acc { color:var(--accent); }
+
+  /* ── FOOTER ──────────────────────────────────────────── */
+  footer {
+    padding:50px 36px 30px;
+    border-top:1px solid var(--grid);
+    background:var(--ink-deep);
+  }
+  .ft-inner {
+    max-width:1280px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:18px;
+  }
+  .ft-mark {
+    font-family:var(--f-display);
+    font-size:1.4rem;
+    letter-spacing:0.16em;
+    color:var(--paper);
+  }
+  .ft-mark .acc { color:var(--accent); }
+  .ft-meta {
+    font-family:var(--f-mono);
+    font-size:0.66rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--bone-dim);
+  }
+  .ft-link {
+    font-family:var(--f-mono);
+    font-size:0.7rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--bone);
+    transition:color 0.3s var(--ease);
+  }
+  .ft-link:hover { color:var(--accent); }
+
+  /* ── REVEAL ──────────────────────────────────────────── */
+  .reveal {
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+  }
+  .reveal.in {
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     MOTION SYSTEM — restrained, brand-signature animations
+     All motion respects prefers-reduced-motion.
+     ═══════════════════════════════════════════════════════════════ */
+
+  /* 1. Accent dot pulse — the green "." after THE PILOT / THE DROP / THRUSTRA
+        Brand signature. Slow, ambient, only visible at edges. */
+  @keyframes pulse-dot {
+    0%, 100% {
+      opacity:1;
+      filter:drop-shadow(0 0 0 transparent);
+    }
+    50% {
+      opacity:0.85;
+      filter:drop-shadow(0 0 8px rgba(200,240,74,0.55));
+    }
+  }
+  .hero-title span[style*="accent"],
+  .tier-name .acc,
+  .nav-mark .acc,
+  .ft-mark .acc {
+    display:inline-block;
+    animation: pulse-dot 4.2s var(--ease) infinite;
+    will-change: opacity, filter;
+  }
+  .tier-name .acc { animation-delay: 1.5s; }
+  .nav-mark .acc { animation-delay: 2.8s; }
+  .ft-mark .acc { animation-delay: 0.6s; }
+
+  /* 2. Hero word-stagger — THE PILOT enters one word at a time on load */
+  @keyframes word-rise {
+    0% {
+      opacity:0;
+      transform:translateY(28px) scale(0.96);
+    }
+    100% {
+      opacity:1;
+      transform:translateY(0) scale(1);
+    }
+  }
+  .hero-title {
+    opacity:1; /* start visible to avoid FOUC */
+  }
+  .hero-title .word-1,
+  .hero-title .word-2 {
+    display:inline-block;
+    opacity:0;
+    animation: word-rise 0.85s var(--ease-out) forwards;
+    will-change: opacity, transform;
+  }
+  .hero-title .word-1 { animation-delay: 0.15s; }
+  .hero-title .word-2 { animation-delay: 0.42s; }
+
+  .hero-kicker, .hero-line, .hero-lede, .hero-cta-block {
+    opacity:0;
+    animation: word-rise 0.7s var(--ease-out) forwards;
+  }
+  .hero-kicker     { animation-delay: 0.0s; }
+  .hero-line       { animation-delay: 0.78s; }
+  .hero-lede       { animation-delay: 0.92s; }
+  .hero-cta-block  { animation-delay: 1.05s; }
+
+  /* 3. Hero coords — slide in from right, slightly delayed */
+  @keyframes coords-slide {
+    0% { opacity:0; transform:translateX(20px); }
+    100% { opacity:1; transform:translateX(0); }
+  }
+  .hero-coords {
+    opacity:0;
+    animation: coords-slide 0.85s var(--ease-out) forwards;
+    animation-delay: 1.3s;
+  }
+
+  /* 4. Tier card — internal price counter "rolls in" when revealed.
+        Plus a soft border-glow on the flagship card. */
+  @keyframes price-rise {
+    0% {
+      opacity:0;
+      transform:translateY(14px);
+      letter-spacing:0.08em;
+    }
+    100% {
+      opacity:1;
+      transform:translateY(0);
+      letter-spacing:0.025em;
+    }
+  }
+  .tier.in .tier-price-num {
+    animation: price-rise 0.7s var(--ease-out) backwards;
+    animation-delay: 0.4s;
+  }
+  .tier.flagship.in .tier-price-num {
+    animation-delay: 0.55s;
+  }
+
+  @keyframes flagship-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(200,240,74,0); }
+    50%      { box-shadow: 0 0 32px -8px rgba(200,240,74,0.18); }
+  }
+  .tier.flagship {
+    animation: flagship-glow 5.5s var(--ease) infinite;
+    animation-delay: 2s;
+  }
+  .tier.flagship:hover {
+    animation: none;
+    box-shadow: 0 0 36px -6px rgba(200,240,74,0.32);
+  }
+
+  /* 5. Drop tag — the small "DROP" label inside the deliverables list */
+  .drop-tag {
+    display:inline-block;
+    color:var(--accent);
+    font-family:var(--f-mono);
+    font-size:0.62rem;
+    letter-spacing:0.22em;
+    margin-left:8px;
+    padding:2px 7px;
+    border:1px solid var(--accent-mid);
+    border-radius:1px;
+    vertical-align:middle;
+    transition: background 0.4s var(--ease), color 0.4s var(--ease);
+  }
+  .deliver-list li.drop-only:hover .drop-tag {
+    background:var(--accent);
+    color:var(--ink);
+  }
+
+  /* 6. Timeline cascade — when timeline reveals, day-steps illuminate sequentially */
+  @keyframes tl-step-glow {
+    0% {
+      opacity:0.45;
+      transform:translateX(-6px);
+    }
+    100% {
+      opacity:1;
+      transform:translateX(0);
+    }
+  }
+  .timeline.in .tl-step {
+    opacity:0.45;
+    animation: tl-step-glow 0.55s var(--ease-out) forwards;
+  }
+  .timeline.in .tl-step:nth-child(1) { animation-delay: 0.3s; }
+  .timeline.in .tl-step:nth-child(2) { animation-delay: 0.6s; }
+  .timeline.in .tl-step:nth-child(3) { animation-delay: 0.9s; }
+  .timeline.in .tl-step:nth-child(4) { animation-delay: 1.2s; }
+
+  @keyframes tl-dot-flare {
+    0% { box-shadow: 0 0 0 0 rgba(200,240,74,0.7), 0 0 0 3px var(--ink); }
+    70% { box-shadow: 0 0 0 8px rgba(200,240,74,0), 0 0 0 3px var(--ink); }
+    100% { box-shadow: 0 0 0 0 rgba(200,240,74,0), 0 0 0 3px var(--ink); }
+  }
+  .timeline.in .tl-step.hot::before {
+    animation: tl-dot-flare 1.4s var(--ease-out) forwards;
+  }
+  .timeline.in .tl-step.hot:nth-child(1)::before { animation-delay: 0.4s; }
+  .timeline.in .tl-step.hot:nth-of-type(4)::before { animation-delay: 1.3s; }
+
+  /* 7. Tier card — content stagger when revealed */
+  .tier.in .tier-head, .tier.in .tier-price, .tier.in .tier-deliver,
+  .tier.in .tier-credit, .tier.in .tier-for, .tier.in .tier-cta-wrap {
+    opacity:0;
+    animation: word-rise 0.55s var(--ease-out) forwards;
+  }
+  .tier.in .tier-head     { animation-delay: 0.05s; }
+  .tier.in .tier-price    { animation-delay: 0.15s; }
+  .tier.in .tier-deliver  { animation-delay: 0.25s; }
+  .tier.in .tier-credit   { animation-delay: 0.35s; }
+  .tier.in .tier-for      { animation-delay: 0.45s; }
+  .tier.in .tier-cta-wrap { animation-delay: 0.55s; }
+
+  /* Stagger right-tier slightly to feel like a wave, not a flash */
+  .tier.flagship.in .tier-head     { animation-delay: 0.15s; }
+  .tier.flagship.in .tier-price    { animation-delay: 0.25s; }
+  .tier.flagship.in .tier-deliver  { animation-delay: 0.35s; }
+  .tier.flagship.in .tier-credit   { animation-delay: 0.45s; }
+  .tier.flagship.in .tier-for      { animation-delay: 0.55s; }
+  .tier.flagship.in .tier-cta-wrap { animation-delay: 0.65s; }
+
+  /* 8. Deliverable list — left-edge accent line slides in on hover */
+  .deliver-list li {
+    position:relative;
+  }
+  .deliver-list li::before {
+    content:"";
+    position:absolute;
+    left:0; top:50%;
+    width:0; height:1px;
+    background:var(--accent);
+    transition: width 0.4s var(--ease-out);
+    transform:translateY(-50%);
+  }
+  .deliver-list li:hover::before {
+    width:32px;
+  }
+
+  /* 9. Section title underline reveal */
+  @keyframes title-underline {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+  .sec-title {
+    position:relative;
+  }
+  .sec-title::after {
+    content:"";
+    position:absolute;
+    left:0; bottom:-12px;
+    height:1px; width:48px;
+    background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+    transform-origin:left;
+    transform:scaleX(0);
+  }
+  .sec-title.in::after {
+    animation: title-underline 0.7s var(--ease-out) forwards;
+    animation-delay: 0.2s;
+  }
+
+  /* 10. CTA arrow — gentle infinite nudge to indicate interactivity */
+  @keyframes arr-nudge {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(3px); }
+  }
+  .cta-primary:not(:hover) .arr,
+  .final-cta-button:not(:hover) .arr {
+    animation: arr-nudge 2.6s var(--ease) infinite;
+    animation-delay: 1.5s;
+  }
+
+  /* 11. Bundle bar — gentle accent shimmer */
+  @keyframes bundle-shimmer {
+    0%, 100% { border-left-color: var(--accent); }
+    50%      { border-left-color: var(--paper); }
+  }
+  .bundle-bar.in {
+    animation: bundle-shimmer 4.5s var(--ease) infinite;
+    animation-delay: 1.5s;
+  }
+
+  /* ── PREFERS-REDUCED-MOTION — respect user system preference ─── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .hero-title .word-1, .hero-title .word-2,
+    .hero-kicker, .hero-line, .hero-lede, .hero-cta-block,
+    .hero-coords {
+      opacity:1 !important;
+    }
+    .tier.in > *,
+    .timeline.in .tl-step {
+      opacity:1 !important;
+      transform:none !important;
+    }
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     TIERS — two on-ramps, side-by-side comparator
+     ═══════════════════════════════════════════════════════════════ */
+  .tiers-section {
+    padding:120px 36px;
+    border-top:1px solid var(--grid);
+    border-bottom:1px solid var(--grid);
+    background:var(--ink-deep);
+    position:relative;
+  }
+  .tiers-section::before {
+    content:"";
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    width:80%; height:60%;
+    background:radial-gradient(ellipse at center, rgba(200,240,74,0.05) 0%, transparent 70%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .tiers-inner {
+    max-width:1280px;
+    margin:0 auto;
+    position:relative;
+    z-index:1;
+  }
+  .tiers-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin-top:48px;
+  }
+  .tier {
+    background:var(--card);
+    border:1px solid var(--grid);
+    padding:0;
+    position:relative;
+    overflow:hidden;
+    transition:border-color 0.4s var(--ease), transform 0.4s var(--ease-out);
+    display:flex; flex-direction:column;
+  }
+  .tier:hover {
+    border-color:var(--grid-hi);
+    transform:translateY(-3px);
+  }
+  .tier.flagship {
+    border-color:var(--accent-mid);
+    background:linear-gradient(180deg, var(--card-hi) 0%, var(--card) 100%);
+  }
+  .tier.flagship::before {
+    content:"FOR CLOTHING & CPG";
+    position:absolute;
+    top:0; left:0;
+    background:var(--accent);
+    color:var(--ink);
+    font-family:var(--f-mono);
+    font-size:0.62rem;
+    letter-spacing:0.22em;
+    font-weight:500;
+    padding:7px 14px;
+    z-index:2;
+  }
+  .tier-head {
+    padding:42px 32px 28px;
+    border-bottom:1px solid var(--grid);
+  }
+  .tier.flagship .tier-head {
+    padding-top:54px;
+  }
+  .tier-num {
+    font-family:var(--f-mono);
+    font-size:0.66rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--bone-dim);
+    margin-bottom:14px;
+  }
+  .tier.flagship .tier-num { color:var(--accent); }
+  .tier-name {
+    font-family:var(--f-display);
+    font-size:clamp(2.6rem, 5vw, 3.6rem);
+    line-height:0.92;
+    letter-spacing:0.025em;
+    color:var(--paper);
+    margin-bottom:14px;
+  }
+  .tier-tag {
+    font-family:var(--f-body);
+    font-size:0.95rem;
+    color:var(--bone);
+    line-height:1.55;
+  }
+  .tier-price {
+    padding:28px 32px 24px;
+    border-bottom:1px solid var(--grid);
+  }
+  .tier-price-row {
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:6px;
+  }
+  .tier-price-num {
+    font-family:var(--f-display);
+    font-size:clamp(2.8rem, 5vw, 4rem);
+    line-height:1;
+    letter-spacing:0.025em;
+    color:var(--accent);
+  }
+  .tier-price-unit {
+    font-family:var(--f-mono);
+    font-size:0.78rem;
+    letter-spacing:0.18em;
+    color:var(--bone);
+    text-transform:uppercase;
+  }
+  .tier-price-add {
+    font-family:var(--f-body);
+    font-size:0.92rem;
+    color:var(--paper);
+    font-weight:500;
+    margin-top:4px;
+  }
+  .tier-price-add .acc { color:var(--accent); }
+  .tier-price-foot {
+    font-family:var(--f-body);
+    font-size:0.82rem;
+    color:var(--bone);
+    margin-top:10px;
+    line-height:1.5;
+  }
+  .tier-deliver {
+    padding:24px 32px 28px;
+    border-bottom:1px solid var(--grid);
+    flex:1;
+  }
+  .tier-deliver-label {
+    font-family:var(--f-mono);
+    font-size:0.62rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--bone-dim);
+    margin-bottom:14px;
+  }
+  .tier-list {
+    list-style:none;
+    display:flex; flex-direction:column;
+    gap:9px;
+  }
+  .tier-list li {
+    font-family:var(--f-body);
+    font-size:0.88rem;
+    color:var(--bone);
+    padding-left:22px;
+    position:relative;
+    line-height:1.5;
+  }
+  .tier-list li::before {
+    content:"+";
+    position:absolute;
+    left:0; top:0;
+    color:var(--accent);
+    font-weight:500;
+  }
+  .tier-list li strong { color:var(--paper); font-weight:500; }
+  .tier-credit {
+    padding:18px 32px;
+    background:rgba(200,240,74,0.04);
+    border-bottom:1px solid var(--grid);
+    font-family:var(--f-body);
+    font-size:0.84rem;
+    line-height:1.55;
+    color:var(--paper);
+  }
+  .tier-credit strong { color:var(--accent); font-weight:500; }
+  .tier-for {
+    padding:18px 32px 24px;
+    border-bottom:1px solid var(--grid);
+    font-family:var(--f-body);
+    font-size:0.82rem;
+    color:var(--bone-dim);
+    font-style:italic;
+    line-height:1.5;
+  }
+  .tier-for strong { color:var(--paper); font-style:normal; font-weight:500; }
+  .tier-cta-wrap {
+    padding:24px 32px 28px;
+  }
+  .tier-cta {
+    display:flex; align-items:center; justify-content:space-between;
+    gap:14px;
+    width:100%;
+    padding:16px 22px;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-size:0.78rem;
+    font-weight:500;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    transition:transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), background 0.4s var(--ease);
+  }
+  .tier-cta:hover {
+    transform:translateY(-2px);
+    background:var(--accent);
+    box-shadow:0 14px 32px -10px rgba(200,240,74,0.45);
+  }
+  .tier.flagship .tier-cta {
+    background:var(--accent);
+    color:var(--ink);
+  }
+  .tier.flagship .tier-cta:hover {
+    background:var(--paper);
+    box-shadow:0 16px 36px -10px rgba(200,240,74,0.55);
+  }
+  .tier-cta .arr { transition:transform 0.3s var(--ease); }
+  .tier-cta:hover .arr { transform:translateX(4px); }
+
+  .bundle-bar {
+    margin-top:32px;
+    padding:18px 28px;
+    background:var(--card);
+    border:1px solid var(--grid);
+    border-left:2px solid var(--accent);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+  .bundle-bar-text {
+    font-family:var(--f-body);
+    font-size:0.92rem;
+    color:var(--paper);
+    line-height:1.5;
+  }
+  .bundle-bar-text strong { color:var(--accent); font-weight:500; }
+  .bundle-bar-meta {
+    font-family:var(--f-mono);
+    font-size:0.7rem;
+    letter-spacing:0.2em;
+    color:var(--bone);
+    text-transform:uppercase;
+  }
+
+  /* ── RESPONSIVE ──────────────────────────────────────── */
+  @media (max-width:1000px) {
+    .hero-row { grid-template-columns:1fr; gap:40px; }
+    .hero-coords { position:static; text-align:left; margin-bottom:28px; }
+    .build-grid { grid-template-columns:1fr; gap:50px; }
+    .econ-grid { grid-template-columns:1fr; }
+    .fit-grid { grid-template-columns:1fr; }
+    .fit-split { grid-template-columns:1fr !important; gap:36px !important; }
+    .credit-callout { grid-template-columns:1fr; gap:14px; }
+    .credit-mark { padding-right:0; padding-bottom:14px; border-right:none; border-bottom:1px solid var(--grid-hi); }
+    .tiers-grid { grid-template-columns:1fr; gap:18px; }
+  }
+  @media (max-width:640px) {
+    nav { padding:16px 22px; }
+    .hero { padding:110px 22px 50px; }
+    .econ-section, .fit-section, .tiers-section { padding:70px 22px; }
+    .build { padding:80px 22px; }
+    .final-cta { padding:90px 22px 80px; }
+    footer { padding:40px 22px 28px; }
+    .timeline { padding:24px 22px; }
+    .deliver-list li { grid-template-columns:54px 1fr; gap:18px; padding:18px 0; }
+    .cta-primary { max-width:none; }
+    .tier-head, .tier-price, .tier-deliver, .tier-credit, .tier-for, .tier-cta-wrap { padding-left:24px; padding-right:24px; }
+    .bundle-bar { flex-direction:column; align-items:flex-start; padding:18px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────── -->
+<nav>
+  <a href="https://thrustra.com" class="nav-mark">THRUSTRA<span class="acc">.</span></a>
+  <a href="https://thrustra.com" class="nav-back"><span class="arr">←</span> Studio site</a>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-coords">
+    <span class="acc">/pilot</span><br>
+    On-ramp engagement<br>
+    Founder-led intake
+  </div>
+
+  <div class="hero-kicker">On-ramp · Two ways in</div>
+
+  <h1 class="hero-title">
+    <span class="word-1">THE</span><br><span class="word-2">PILOT</span><span style="color:var(--accent);">.</span>
+  </h1>
+
+  <div class="hero-row">
+    <div>
+      <div class="hero-line">
+        Two on-ramps. <em>One studio.</em><br>Yours forever.
+      </div>
+      <p class="hero-lede">
+        <strong>The Pilot</strong> is a single owned landing page in 7 days for $1,500. <strong>The Drop</strong> adds creative and 60 days of managed Meta &amp; TikTok spend for clothing brands. Both end the same way &mdash; <strong>domain, code, ad accounts, all yours.</strong>
+      </p>
+    </div>
+
+    <div class="hero-cta-block">
+      <a href="#tiers" class="cta-primary" id="heroCta">
+        <span>See the on-ramps</span>
+        <span class="arr">↓</span>
+      </a>
+      <div class="hero-qual">
+        <span class="acc">→</span> Founder-led intake on every deal<br>
+        <span class="acc">→</span> The Pilot upgrades to Launch &middot; The Drop upgrades to OS
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ECONOMICS STRIP ─────────────────────────────────── -->
+<section class="tiers-section" id="tiers">
+  <div class="tiers-inner">
+    <div class="sec-num reveal">01 / The on-ramps</div>
+    <h2 class="sec-title reveal">Pick the door. <em>Same studio either way.</em></h2>
+
+    <div class="tiers-grid">
+
+      <!-- ── THE PILOT ── -->
+      <div class="tier reveal">
+        <div class="tier-head">
+          <div class="tier-num">01 · The Pilot</div>
+          <div class="tier-name">THE PILOT<span style="color:var(--accent);">.</span></div>
+          <div class="tier-tag">A single high-conversion landing page. Wired and live in 7 days. Yours at handoff.</div>
+        </div>
+
+        <div class="tier-price">
+          <div class="tier-price-row">
+            <div class="tier-price-num">$1,500</div>
+            <div class="tier-price-unit">flat · one-time</div>
+          </div>
+          <div class="tier-price-foot">7-day delivery. No retainer, no subscription. Yours at handoff &mdash; domain, code, credentials, infrastructure.</div>
+        </div>
+
+        <div class="tier-deliver">
+          <div class="tier-deliver-label">→ What ships</div>
+          <ul class="tier-list">
+            <li><strong>One landing page</strong> built against your offer</li>
+            <li>Brand foundation &mdash; logo, palette, type pair</li>
+            <li>Wired form / CTA routing to your inbox</li>
+            <li>Mobile-first build, deployed live</li>
+            <li>Full file &amp; credential handoff</li>
+          </ul>
+        </div>
+
+        <div class="tier-credit">
+          <strong>Upgrade math.</strong> Step into a full Launch within 30 days, the entire $1,500 credits in &mdash; you pay $4,500 instead of $6,000.
+        </div>
+
+        <div class="tier-for">
+          <strong>For:</strong> Operators testing positioning, pre-launch founders, anyone who wants to see how Thrustra ships before committing to a Launch.
+        </div>
+
+        <div class="tier-cta-wrap">
+          <a href="#apply" class="tier-cta" data-tier="pilot">
+            <span>Apply for The Pilot</span>
+            <span class="arr">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ── THE DROP ── -->
+      <div class="tier flagship reveal">
+        <div class="tier-head">
+          <div class="tier-num">02 · The Drop</div>
+          <div class="tier-name">THE DROP<span style="color:var(--accent);">.</span></div>
+          <div class="tier-tag">Drop page, ad creative, and 60 days of managed Meta &amp; TikTok spend. Built for clothing brands launching the first run.</div>
+        </div>
+
+        <div class="tier-price">
+          <div class="tier-price-row">
+            <div class="tier-price-num">$3,500</div>
+            <div class="tier-price-unit">build · flat</div>
+          </div>
+          <div class="tier-price-add"><span class="acc">+</span> $1,500/mo &middot; managed ads &middot; 60-day minimum</div>
+          <div class="tier-price-foot">Bundle both at intake and the first month is <strong>$4,500</strong> &mdash; $500 saved. 7-day build window. Page is yours at handoff regardless of ads.</div>
+        </div>
+
+        <div class="tier-deliver">
+          <div class="tier-deliver-label">→ What ships</div>
+          <ul class="tier-list">
+            <li><strong>Drop landing page</strong> built for paid traffic conversion</li>
+            <li>Brand foundation &mdash; drop aesthetic, type, color</li>
+            <li><strong>3&ndash;5 ad creative units</strong> &mdash; static, hooks, headline variants</li>
+            <li>Pixel pre-installed, UTM tracking baked in</li>
+            <li><strong>60 days of managed Meta &amp; TikTok ads</strong> &mdash; account setup, audience build, daily optimization</li>
+            <li>Weekly performance briefs &mdash; what spent, what converted, what's next</li>
+          </ul>
+        </div>
+
+        <div class="tier-credit">
+          <strong>Upgrade math.</strong> If The Drop validates the offer, the build fee credits forward against a full Operating System engagement &mdash; the apparel-grade store, customer data layer, and inventory automation that comes after the launch.
+        </div>
+
+        <div class="tier-for">
+          <strong>For:</strong> Clothing brands shipping their first drop. Product in hand, aesthetic locked, missing the page that converts paid traffic and the creative to drive it.
+        </div>
+
+        <div class="tier-cta-wrap">
+          <a href="#apply" class="tier-cta" data-tier="drop">
+            <span>Apply for The Drop</span>
+            <span class="arr">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bundle-bar reveal">
+      <div class="bundle-bar-text"><strong>Why two?</strong> Service operators need a page. Clothing brands need the page, the creative, and someone running the spend. Same studio, scoped to what each ships.</div>
+      <div class="bundle-bar-meta">→ Founder-led on every deal</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DELIVERABLES + TIMELINE ─────────────────────────── -->
+<section class="build">
+  <div class="sec-num reveal">03 / What ships, in 7 days</div>
+  <h2 class="sec-title reveal">Same cadence. <em>Different scope.</em></h2>
+  <p style="font-family:var(--f-body);font-size:1rem;color:var(--bone);line-height:1.55;max-width:42em;margin:-32px 0 32px;" class="reveal">Both run on the same 7-day clock. The Drop adds creative production and pixel infrastructure to the build, then 60 days of managed spend starting Day 8.</p>
+
+  <div class="build-grid">
+    <div>
+      <ul class="deliver-list reveal">
+        <li>
+          <div class="deliver-n">01</div>
+          <div>
+            <div class="deliver-h">High-conversion landing page</div>
+            <div class="deliver-d">Hero, proof, mechanism, single conversion target. Designed against your audience, not a template.</div>
+          </div>
+        </li>
+        <li>
+          <div class="deliver-n">02</div>
+          <div>
+            <div class="deliver-h">Brand foundation</div>
+            <div class="deliver-d">Logo treatment, palette, type pair. Production-ready &mdash; works on the page and anywhere you take it after.</div>
+          </div>
+        </li>
+        <li>
+          <div class="deliver-n">03</div>
+          <div>
+            <div class="deliver-h">Mobile-first build, deployed live</div>
+            <div class="deliver-d">Hosted on production infrastructure. Handoff includes the live URL, source files, deployment account.</div>
+          </div>
+        </li>
+        <li class="drop-only">
+          <div class="deliver-n">04</div>
+          <div>
+            <div class="deliver-h">Pixel + tracking infrastructure <span class="drop-tag">DROP</span></div>
+            <div class="deliver-d">Meta &amp; TikTok Pixels installed and tested. UTM tracking hardcoded. Conversion events firing before Day 8 spend.</div>
+          </div>
+        </li>
+        <li class="drop-only">
+          <div class="deliver-n">05</div>
+          <div>
+            <div class="deliver-h">Ad creative units <span class="drop-tag">DROP</span></div>
+            <div class="deliver-d">3&ndash;5 static units, hooks, headline variants. Sized for Meta and TikTok feed placements. Ready Day 8.</div>
+          </div>
+        </li>
+        <li>
+          <div class="deliver-n">06</div>
+          <div>
+            <div class="deliver-h">Full file &amp; credential handoff</div>
+            <div class="deliver-d">Domain, source, hosting, form, ad accounts. Fire us tomorrow and the page keeps running. That's the point.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="timeline-label">→ The 7-day cadence</div>
+      <h3 class="timeline-title">How it ships.</h3>
+      <div class="timeline-track">
+        <div class="tl-step hot">
+          <div class="tl-day"><span class="acc">Day 1</span> · Discovery</div>
+          <div class="tl-h">Intake call &amp; scope lock</div>
+          <div class="tl-d">20-minute founder-led call. Offer, audience, conversion target. Drop intakes also scope ad budget and launch window.</div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-day"><span class="acc">Days 2&ndash;3</span> · Strategy</div>
+          <div class="tl-h">Positioning &amp; layout</div>
+          <div class="tl-d">Page architecture, copy direction, visual system. Drop creative angles get scoped in parallel.</div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-day"><span class="acc">Days 4&ndash;6</span> · Build</div>
+          <div class="tl-h">Design &amp; production</div>
+          <div class="tl-d">Page built, brand foundation produced, form wired. Drop adds pixels installed, tracking validated, creative produced. Preview link by Day 6.</div>
+        </div>
+        <div class="tl-step hot">
+          <div class="tl-day"><span class="acc">Day 7</span> · Ship</div>
+          <div class="tl-h">Live, owned, handed off</div>
+          <div class="tl-d">Page deployed, credentials transferred. For Drop: ad accounts handed off, 60-day managed window starts Day 8.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO IT'S FOR ────────────────────────────────────── -->
+<section class="fit-section">
+  <div class="fit-inner">
+    <div class="sec-num reveal">02 / Who each one's for</div>
+    <h2 class="sec-title reveal">Two on-ramps. <em>Different operators.</em></h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px;" class="fit-split">
+
+      <div>
+        <div style="font-family:var(--f-mono);font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">→ The Pilot</div>
+        <div class="fit-grid reveal" style="grid-template-columns:1fr;">
+          <div class="fit-cell">
+            <div class="fit-num">01 · Pre-launch founders</div>
+            <div class="fit-h">Anyone with a launch date.</div>
+            <div class="fit-d">Consultants, course creators, speakers. Hard deadline, need a page that converts before it. The 7-day clock is the offer.</div>
+          </div>
+          <div class="fit-cell">
+            <div class="fit-num">02 · Sub-Launch operators</div>
+            <div class="fit-h">Service ops doing under $500K.</div>
+            <div class="fit-d">A full Launch is too much, too soon. Same production stack, fraction of the engagement. Upgrade when ready.</div>
+          </div>
+          <div class="fit-cell">
+            <div class="fit-num">03 · Launch-curious</div>
+            <div class="fit-h">You want to see how we ship.</div>
+            <div class="fit-d">Considering a Launch, want proof before wiring $6,000. The Pilot is the proof &mdash; how Thrustra runs, on a real deliverable, in 7 days.</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family:var(--f-mono);font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">→ The Drop</div>
+        <div class="fit-grid reveal" style="grid-template-columns:1fr;">
+          <div class="fit-cell">
+            <div class="fit-num">01 · First-drop apparel</div>
+            <div class="fit-h">Clothing brands launching the first run.</div>
+            <div class="fit-d">Product in hand, aesthetic locked. Missing a page that converts paid traffic, ad creative ready to push, and someone who can run the spend. The Drop is the whole stack &mdash; built and managed for 60 days.</div>
+          </div>
+          <div class="fit-cell">
+            <div class="fit-num">02 · CPG founders pre-store</div>
+            <div class="fit-h">Beauty, wellness, food, accessories.</div>
+            <div class="fit-d">Validate demand before building inventory. The Drop runs the launch, captures the audience, proves the offer. The OS engagement comes after.</div>
+          </div>
+          <div class="fit-cell">
+            <div class="fit-num">03 · Returning brand operators</div>
+            <div class="fit-h">A relaunch, a new collection, a season drop.</div>
+            <div class="fit-d">Existing brand with a buyer base, shipping a new release. Purpose-built for a 60-day launch window with paid traffic doing the work.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── BIG CTA ────────────────────────────────────────── -->
+<section class="final-cta" id="apply">
+  <div class="final-kicker reveal">→ The intake</div>
+  <h2 class="final-title reveal">7 days from now. <em>You're shipping.</em></h2>
+  <p class="final-body reveal">
+    Pick the on-ramp. 20-minute founder-led intake. We map the page, lock the scope, confirm the window. <strong>No deck, no pressure.</strong> If neither's the fit, we'll say so on the call.
+  </p>
+  <div class="final-cta-row reveal">
+    <a href="#tiers" class="final-cta-button" id="bookBtn">
+      <span>Pick your on-ramp</span>
+      <span class="arr">↑</span>
+    </a>
+    <div class="final-meta">
+      <span class="acc">→</span> 20 minutes · Founder-led · Scope confirmed on the call
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+  <div class="ft-inner">
+    <a href="https://thrustra.com" class="ft-mark">THRUSTRA<span class="acc">.</span></a>
+    <div class="ft-meta">© 2026 · Founder-led · Operating across the East Coast, West Africa, and Europe</div>
+    <a href="https://thrustra.com" class="ft-link">← Studio site</a>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCRIPTS — reveal observer + Cal.com popup hook
+     ═══════════════════════════════════════════════════════════════ -->
+
+<!-- Cal.com embed (uncomment + replace handle when live) -->
+<!-- <script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "pilot-intake", {origin: "https://cal.com"});
+Cal.ns["pilot-intake"]("ui", { hideEventTypeDetails: false, layout: "month_view" });
+</script> -->
+
+<script>
+  // Reveal observer — reused pattern from thrustra.com v7
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Booking routes — wires to Cal.com when configured, see README.md → "Wiring the booking link"
+  // SWAP these placeholders for live Cal.com event slugs:
+  const BOOKING_URLS = {
+    pilot: 'https://cal.com/thrustragrowthagency/pilot-intake',
+    drop:  'https://cal.com/thrustragrowthagency/drop-intake'
+  };
+  const FALLBACK_EMAIL = 'mailto:karim@thrustra.com?subject=Pilot%20%2F%20Drop%20Intake&body=Name%3A%0AOn-ramp%3A%20%28Pilot%20or%20Drop%29%0AWhat%20you%27re%20launching%3A%0AYour%20deadline%3A';
+
+  // Tier-specific CTAs — route by data-tier attribute
+  document.querySelectorAll('[data-tier]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tier = btn.dataset.tier;
+      const url = BOOKING_URLS[tier] || BOOKING_URLS.pilot;
+      window.open(url, '_blank', 'noopener');
+    });
+  });
+
+  // Generic booking button (final CTA) — scrolls to tiers if user hasn't picked one yet
+  const finalBtn = document.getElementById('bookBtn');
+  if (finalBtn) {
+    finalBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tiersSection = document.getElementById('tiers');
+      if (tiersSection) {
+        tiersSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
+  // Anchor scroll for in-page links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length > 1 && !a.dataset.tier) {
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
