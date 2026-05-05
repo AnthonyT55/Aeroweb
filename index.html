@@ -3220,7 +3220,7 @@
   .click-to-call {
     display:none;
     position:fixed;
-    bottom:88px;
+    bottom:24px;
     right:16px;
     z-index:80;
     width:54px;
@@ -3233,7 +3233,7 @@
     text-decoration:none;
     box-shadow:0 12px 28px -8px rgba(200,240,74,0.4),
                0 0 0 1px rgba(200,240,74,0.6);
-    transition:transform 0.3s var(--ease-out);
+    transition:transform 0.3s var(--ease-out), opacity 0.3s var(--ease), visibility 0.3s var(--ease);
   }
   .click-to-call:hover, .click-to-call:active {
     transform:scale(1.08);
@@ -3243,9 +3243,15 @@
     .click-to-call { display:flex; }
   }
 
-  /* When sticky CTA is shown on mobile, push click-to-call up */
+  /* When sticky CTA is visible on mobile, hide click-to-call entirely.
+     They're redundant CTAs — sticky bar takes priority because it's more
+     informative ($1500 · 7 days · Yours forever). When sticky is dismissed,
+     FAB returns as the persistent contact option. */
   .sticky-cta.in ~ .click-to-call {
-    bottom:104px;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateY(8px) scale(0.9);
   }
 
   /* ═══════════════════════════════════════════════════════════════
