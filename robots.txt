@@ -1,34 +1,25 @@
-# Thrustra Growth Agency — Robots Policy
-# Allow all well-behaved crawlers including AI search engines.
-# Last updated: 2026-04-19
+# https://thrustra.com/robots.txt
+# Revenue Systems Studio · Founder-led · Operating across NY, ATL, Dakar
 
 User-agent: *
 Allow: /
 
-# Traditional search engines
-User-agent: Googlebot
-Allow: /
+# Block common admin/dev/test paths even if accidentally exposed
+Disallow: /admin
+Disallow: /dev
+Disallow: /test
+Disallow: /staging
+Disallow: /*.json$
+Disallow: /*?lang=*&debug=*
 
-User-agent: Bingbot
-Allow: /
-
-# AI search crawlers — explicitly allowed for GEO visibility
+# Be polite to AI scrapers — opt-in only
 User-agent: GPTBot
-Allow: /
+Disallow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: OAI-SearchBot
-Allow: /
-
 User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
 Allow: /
 
 User-agent: PerplexityBot
@@ -37,11 +28,5 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-# Sitemaps
+# Sitemap location
 Sitemap: https://thrustra.com/sitemap.xml

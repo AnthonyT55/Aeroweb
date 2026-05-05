@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Cookiebot — same configuration as homepage -->
+<script id="Cookiebot"
+        src="https://consent.cookiebot.com/uc.js"
+        data-cbid="b521d948-cfc7-4937-a819-ac88f6864bb3"
+        data-blockingmode="manual"
+        type="text/javascript"
+        async></script>
+
+<title>Privacy Policy — Thrustra</title>
+<meta name="description" content="How Thrustra collects, uses, and protects information. Founder-led data stewardship, GDPR and CCPA compliant.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thrustra.com/privacy">
+
+<meta name="theme-color" content="#050505">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #050505;
+    --ink-deep: #080808;
+    --card: #0d0d0d;
+    --card-hi: #131313;
+    --paper: #F8F6F2;
+    --bone: rgba(248,246,242,0.62);
+    --bone-dim: rgba(248,246,242,0.42);
+    --grid: rgba(248,246,242,0.08);
+    --grid-hi: rgba(248,246,242,0.16);
+    --accent: #C8F04A;
+    --accent-mid: rgba(200,240,74,0.32);
+    --f-display: 'Bebas Neue', sans-serif;
+    --f-head: 'Syne', sans-serif;
+    --f-body: 'DM Sans', sans-serif;
+    --f-mono: 'JetBrains Mono', monospace;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--f-body);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--grid);
+    padding: 18px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    font-family: var(--f-display);
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    color: var(--paper);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .nav-back {
+    font-family: var(--f-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone);
+    text-decoration: none;
+    transition: color 0.3s var(--ease-out);
+  }
+  .nav-back:hover { color: var(--accent); }
+
+  /* ── PAGE FRAME ── */
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 80px 48px 120px;
+    background:
+      radial-gradient(ellipse 100% 40% at 50% 0%, rgba(200,240,74,0.025) 0%, transparent 60%),
+      transparent;
+  }
+
+  .label {
+    font-family: var(--f-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
+    color: var(--bone);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .label::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-family: var(--f-display);
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    margin: 0 0 16px;
+    color: var(--paper);
+  }
+  h1 em {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  .lede {
+    font-family: var(--f-body);
+    font-size: 1.1rem;
+    line-height: 1.55;
+    color: var(--bone);
+    margin: 0 0 16px;
+    max-width: 60em;
+  }
+  .lede strong { color: var(--paper); font-weight: 500; }
+
+  .meta {
+    font-family: var(--f-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    color: var(--bone-dim);
+    text-transform: uppercase;
+    margin: 24px 0 56px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--grid);
+  }
+
+  h2 {
+    font-family: var(--f-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--paper);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin: 56px 0 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  h2 .num {
+    font-family: var(--f-mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    letter-spacing: 0.16em;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-family: var(--f-head);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--paper);
+    margin: 24px 0 8px;
+  }
+
+  p {
+    font-family: var(--f-body);
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: var(--bone);
+    margin: 0 0 14px;
+  }
+  p strong { color: var(--paper); font-weight: 500; }
+
+  a {
+    color: var(--paper);
+    border-bottom: 1px solid var(--grid-hi);
+    text-decoration: none;
+    transition: border-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
+  }
+  a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  ul {
+    margin: 0 0 14px;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul li {
+    font-family: var(--f-body);
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: var(--bone);
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .callout {
+    border-left: 2px solid var(--accent);
+    padding: 16px 22px;
+    margin: 20px 0;
+    background: var(--card);
+  }
+  .callout p { margin: 0; color: var(--bone); }
+  .callout strong { color: var(--paper); }
+
+  /* ── CONTACT BOX ── */
+  .contact-box {
+    margin-top: 64px;
+    padding: 36px 32px;
+    background: var(--card);
+    border: 1px solid var(--grid);
+    border-top: 2px solid var(--accent);
+  }
+  .contact-box .kicker {
+    font-family: var(--f-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .contact-box h3 {
+    font-family: var(--f-display);
+    font-size: 2rem;
+    color: var(--paper);
+    margin: 0 0 12px;
+    letter-spacing: 0.025em;
+    line-height: 1;
+  }
+  .contact-box p { margin-bottom: 12px; }
+
+  /* ── FOOTER ── */
+  footer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 48px;
+    border-top: 1px solid var(--grid);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: var(--f-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    color: var(--bone-dim);
+    text-transform: uppercase;
+  }
+  footer a {
+    color: var(--bone);
+    border-bottom: none;
+  }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 600px) {
+    nav { padding: 16px 24px; }
+    .page { padding: 56px 24px 80px; }
+    h2 { font-size: 1.25rem; flex-direction: column; align-items: flex-start; gap: 4px; }
+    .contact-box { padding: 28px 22px; }
+    footer { padding: 24px; flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ════════════════════════════════════════════════════════════
+     COOKIEBOT BANNER OVERRIDES — same as homepage
+     ════════════════════════════════════════════════════════════ */
+  #CybotCookiebotDialog,
+  #CybotCookiebotDialog * { font-family: var(--f-body) !important; }
+  #CybotCookiebotDialog {
+    background: var(--ink) !important;
+    border: 1px solid var(--grid-hi) !important;
+    border-top: 2px solid var(--accent) !important;
+    box-shadow: 0 24px 60px -16px rgba(0,0,0,0.65), 0 0 32px -8px rgba(200,240,74,0.12) !important;
+    border-radius: 0 !important;
+    color: var(--paper) !important;
+    max-width: 460px !important;
+    padding: 28px 26px 24px !important;
+  }
+  #CybotCookiebotDialog #CybotCookiebotDialogBodyContentTitle {
+    font-family: var(--f-head) !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: var(--paper) !important;
+  }
+  #CybotCookiebotDialog #CybotCookiebotDialogBodyContentText {
+    font-size: 0.85rem !important;
+    color: var(--bone) !important;
+  }
+  #CybotCookiebotDialog .CybotCookiebotDialogBodyButton {
+    border-radius: 0 !important;
+    padding: 13px 18px !important;
+    font-family: var(--f-body) !important;
+    font-size: 0.74rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+  }
+  #CybotCookiebotDialog #CybotCookiebotDialogBodyButtonAccept {
+    background: var(--accent) !important;
+    color: var(--ink) !important;
+    border: none !important;
+  }
+  #CybotCookiebotDialog #CybotCookiebotDialogBodyButtonDecline {
+    background: transparent !important;
+    color: var(--paper) !important;
+    border: 1px solid var(--grid-hi) !important;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="brand">THRUSTRA</a>
+  <a href="/" class="nav-back">← Back to studio</a>
+</nav>
+
+<main class="page">
+
+  <div class="label">Privacy Policy</div>
+
+  <h1>How we handle <em>your data.</em></h1>
+
+  <p class="lede">Thrustra is a founder-led revenue systems studio. <strong>We collect the minimum data required to do the work, and we don't sell, share, or rent your information to anyone.</strong> This page explains exactly what we do collect, why, and how to control it.</p>
+
+  <div class="meta">
+    Last updated: May 4, 2026 · Effective: May 4, 2026
+  </div>
+
+  <h2><span class="num">01</span> Who we are</h2>
+  <p>Thrustra (operating as Thrustra Growth Agency) is a revenue systems studio founded by Karim Cisse. We build websites, CRMs, dashboards, and automation systems for service operators between $250K and $10M. We operate across the East Coast, West Africa, and Europe.</p>
+  <p>For privacy questions, you can reach us directly at <a href="mailto:thrustragrowthagency@gmail.com">thrustragrowthagency@gmail.com</a>. There is no privacy team — Karim handles these requests personally.</p>
+
+  <h2><span class="num">02</span> What we collect</h2>
+
+  <h3>Information you give us directly</h3>
+  <p>When you fill out our application form or email us, we collect:</p>
+  <ul>
+    <li>Your name, email address, and business name</li>
+    <li>Any context you choose to share about your project, scope, or timeline</li>
+    <li>Anything else you write to us in correspondence</li>
+  </ul>
+
+  <h3>Information collected automatically</h3>
+  <p>When you visit thrustra.com, our analytics tools (only after you give consent) may collect:</p>
+  <ul>
+    <li>Pages visited and time spent on each</li>
+    <li>How you arrived (referring site, search query, ad click)</li>
+    <li>General device information (browser, operating system, screen size)</li>
+    <li>Approximate geographic region (country/state level — never precise location)</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>What we do NOT collect:</strong> We don't track you across other websites. We don't build advertising profiles. We don't fingerprint your device. We don't sell or share data with data brokers.</p>
+  </div>
+
+  <h2><span class="num">03</span> How we use it</h2>
+  <p>Form submissions are used solely to respond to your inquiry, understand your project, and determine if we're the right studio for the work. If we're not the right fit, we'll tell you who might be — and then we delete your information.</p>
+  <p>Analytics data (when consented) helps us understand which pages and content actually help people understand what we do. It directly shapes our website design decisions. It does not feed advertising platforms or remarketing campaigns unless you've explicitly opted into marketing cookies.</p>
+
+  <h2><span class="num">04</span> Third parties</h2>
+  <p>We use a small set of trusted services to operate the studio. Each receives only the data necessary for its function:</p>
+  <ul>
+    <li><strong>Formspree</strong> — receives form submissions and forwards them to our inbox. <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Their privacy policy</a>.</li>
+    <li><strong>Google / Firebase</strong> — hosts our backend infrastructure (Firestore for site content, Analytics for usage metrics). <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's privacy policy</a>.</li>
+    <li><strong>Calendly</strong> — books Fit Calls when you click through. <a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer">Calendly's privacy policy</a>.</li>
+    <li><strong>Cookiebot (by Usercentrics)</strong> — manages cookie consent on our site. <a href="https://www.cookiebot.com/en/privacy-policy/" target="_blank" rel="noopener noreferrer">Cookiebot's privacy policy</a>.</li>
+    <li><strong>GitHub Pages</strong> — serves the site itself. <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy policy</a>.</li>
+  </ul>
+  <p>We do not use advertising networks, retargeting pixels, or third-party social tracking on this site.</p>
+
+  <h2><span class="num">05</span> Cookies and tracking</h2>
+  <p>This site uses two categories of cookies:</p>
+  <ul>
+    <li><strong>Strictly necessary</strong> — these enable basic site functionality (remembering you dismissed the consent banner, session continuity for the form). These run without consent because the site cannot function without them.</li>
+    <li><strong>Statistics</strong> — Google/Firebase Analytics cookies that help us understand site usage. These only run after you accept them via the consent banner.</li>
+  </ul>
+  <p>You can change your cookie preferences any time by clicking <strong>Cookie Settings</strong> at the bottom of any page. If you decline statistics cookies, the site continues to function normally — we just lose visibility into how it's being used.</p>
+
+  <h2><span class="num">06</span> How long we keep data</h2>
+  <ul>
+    <li>Form submissions and emails: kept until the inquiry is resolved, then archived for up to 24 months for engagement records, then deleted.</li>
+    <li>Analytics data: retained per Google's default GA4 settings (currently 14 months), then automatically purged.</li>
+    <li>Cookie consent records: retained per Cookiebot's standard policy (12 months) so we know you've already chosen.</li>
+  </ul>
+
+  <h2><span class="num">07</span> Your rights</h2>
+  <p>Under GDPR (if you're in the EU/UK) and CCPA (if you're in California), you have the right to:</p>
+  <ul>
+    <li><strong>Access</strong> the data we hold about you</li>
+    <li><strong>Correct</strong> any inaccuracies</li>
+    <li><strong>Delete</strong> your data ("right to be forgotten")</li>
+    <li><strong>Export</strong> your data in a portable format</li>
+    <li><strong>Object</strong> to specific uses</li>
+    <li><strong>Withdraw consent</strong> for analytics or marketing at any time</li>
+  </ul>
+  <p>To exercise any of these rights, email <a href="mailto:thrustragrowthagency@gmail.com">thrustragrowthagency@gmail.com</a> from the address you originally contacted us from. We respond within 14 days, usually within 48 hours.</p>
+
+  <h2><span class="num">08</span> International transfers</h2>
+  <p>Because we operate across the East Coast, West Africa, and Europe, your data may be processed on servers in the United States, the European Union, or Senegal depending on which third-party service handles it. All transfers comply with applicable safeguards (Standard Contractual Clauses for EU data flowing to the US, etc.).</p>
+
+  <h2><span class="num">09</span> Children's privacy</h2>
+  <p>Thrustra is a B2B studio. We don't knowingly collect data from anyone under 16. If you believe a minor has submitted information, email us and we'll delete it immediately.</p>
+
+  <h2><span class="num">10</span> Changes to this policy</h2>
+  <p>If we materially change how we handle data, we'll update this page and change the "Last updated" date at the top. For significant changes (like adding new third-party services or new categories of data collection), we'll also notify anyone who's submitted a form to us in the past 12 months by email.</p>
+
+  <div class="contact-box">
+    <div class="kicker">→ Privacy Requests</div>
+    <h3>Talk to a human.</h3>
+    <p>Karim handles privacy requests personally. No ticketing system, no chatbot, no privacy-team-of-one with a generic auto-responder.</p>
+    <p><a href="mailto:thrustragrowthagency@gmail.com">thrustragrowthagency@gmail.com</a></p>
+    <p style="font-family:var(--f-mono);font-size:0.72rem;letter-spacing:0.16em;color:var(--bone-dim);text-transform:uppercase;margin-top:14px;">Response window: 14 days · Typical: 48 hours</p>
+  </div>
+
+</main>
+
+<footer>
+  <div>© 2026 Thrustra · All rights reserved</div>
+  <div>
+    <a href="/">Studio</a>
+    &nbsp;·&nbsp;
+    <a href="javascript:Cookiebot.renew()">Cookie Settings</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:thrustragrowthagency@gmail.com">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
